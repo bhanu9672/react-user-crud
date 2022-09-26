@@ -1,0 +1,92 @@
+{
+    "users" : [
+        {
+            "id" : 1,
+            "name" : "Bhanu Pratap Singh",
+            "username" : "Bhanu",
+            "email" : "Bhanubhanu7737@gmail.com",
+            "address" : {
+                "street" : "Demo Street",
+                "suite" : "Apt . 556",
+                "city" : "Kota",
+                "zipcode": "325216",
+                "geo" : {
+                    "lat" : "40.266",
+                    "lng" : "811496"
+                }
+            },
+            "phone" : "8619804757",
+            "website" : "www.bhanu.com",
+            "company" : {
+                "name" : "company Name"
+            }
+
+        },
+        {
+            "id" : 2,
+            "name" : "Mohit Verma",
+            "username" : "Bhanu",
+            "email" : "Mohit@gmail.com",
+            "address" : {
+                "street" : "Demo Street",
+                "suite" : "Apt . 556",
+                "city" : "Kota",
+                "zipcode": "325216",
+                "geo" : {
+                    "lat" : "40.266",
+                    "lng" : "811496"
+                }
+            },
+            "phone" : "8619804757",
+            "website" : "www.bhanu.com",
+            "company" : {
+                "name" : "company Name"
+            }
+
+        },
+        {
+            "id" : 3,
+            "name" : "Poonam Singh",
+            "username" : "Bhanu",
+            "email" : "poonam@gmail.com",
+            "address" : {
+                "street" : "Demo Street",
+                "suite" : "Apt . 556",
+                "city" : "Kota",
+                "zipcode": "325216",
+                "geo" : {
+                    "lat" : "40.266",
+                    "lng" : "811496"
+                }
+            },
+            "phone" : "8619804757",
+            "website" : "www.bhanu.com",
+            "company" : {
+                "name" : "company Name"
+            }
+
+        },
+        {
+            "id" : 4,
+            "name" : "Jay Singh",
+            "username" : "Bhanu",
+            "email" : "jay@gmail.com",
+            "address" : {
+                "street" : "Demo Street",
+                "suite" : "Apt . 556",
+                "city" : "Kota",
+                "zipcode": "325216",
+                "geo" : {
+                    "lat" : "40.266",
+                    "lng" : "811496"
+                }
+            },
+            "phone" : "8619804757",
+            "website" : "www.bhanu.com",
+            "company" : {
+                "name" : "company Name"
+            }
+
+        }
+    ]
+}
