@@ -9,8 +9,7 @@ import {
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const Home = () => {
-
+const ViewUser = () => {
     const [users, setUser] = useState([]);
 
     useEffect(() => {
@@ -18,17 +17,16 @@ const Home = () => {
     }, []);
 
     const LoadUers = async () => {
-        const result = await axios.get("http://localhost:3003/users/");
+        const result = await axios.get(`http://localhost:3003/users/`);
         setUser(result.data);
         //console.log( result );
     }
-    console.log(users)
     return (
         <>
             <Container className="my-5">
                 <Row>
                     <Col>
-                        <h3>Home Page</h3>
+                        <h3>View User Page</h3>
                         {
                             users.length > 0 ?
                                 <>
@@ -75,4 +73,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default ViewUser

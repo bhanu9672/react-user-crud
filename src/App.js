@@ -7,6 +7,7 @@ import NotFound from './Components/Pages/NotFound';
 import Header from "./Components/Layout/Header";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ViewUser from './Components/Pages/ViewUser';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			   <Header />
 				<Routes>
 					<Route path="/" element={ <Home /> } />
+					<Route path="/user:id" element={ <ViewUser /> } />
 					<Route path="/about" element={ <About /> } />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="*" element={ <NotFound /> } />
