@@ -10,7 +10,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-
     const [users, setUser] = useState([]);
 
     useEffect(() => {
@@ -18,11 +17,10 @@ const Home = () => {
     }, []);
 
     const LoadUers = async () => {
-        const result = await axios.get("http://localhost:3003/users/");
+        const result = await axios.get( `https://bhanu9672.github.io/json-user-api/users.json`);
         setUser(result.data);
         //console.log( result );
     }
-    console.log(users)
     return (
         <>
             <Container className="my-5">
@@ -30,7 +28,7 @@ const Home = () => {
                     <Col>
                         <h3>Home Page</h3>
                         {
-                            users.length > 0 ?
+                            users.length != '' ?
                                 <>
                                     <Table striped bordered hover className="my-5">
                                         <thead>
@@ -44,14 +42,14 @@ const Home = () => {
                                         </thead>
                                         <tbody>
                                             {
-                                                users.map((user, index) => (
-                                                    <tr>
+                                                users.users.map((user, index) => (
+                                                    <tr key={user.id}>
                                                         <td>{index + 1}</td>
                                                         <td>{user.name}</td>
                                                         <td>{user.username}</td>
                                                         <td>{user.email}</td>
                                                         <td>
-                                                            <Link className="btn btn-primary" to={`/user:${user.id}`}>View</Link>
+                                                            <Link className="btn btn-primary" to={`/user/${user.id}`}>View</Link>
                                                             <Link className="btn btn-outline-primary">Edit</Link>
                                                             <Link className="btn btn-danger">Delete</Link>
                                                         </td>
