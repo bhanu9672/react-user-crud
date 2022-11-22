@@ -17,7 +17,7 @@ const Home = () => {
     }, []);
 
     const LoadUers = async () => {
-        const result = await axios.get( `https://bhanu9672.github.io/json-user-api/users.json`);
+        const result = await axios.get(`https://6372260507858778618be42c.mockapi.io/react-user-crud_users/`);
         setUser(result.data);
         //console.log( result );
     }
@@ -28,9 +28,9 @@ const Home = () => {
                     <Col>
                         <h3>Home Page</h3>
                         {
-                            users.length != '' ?
+                            users.length > 0 ?
                                 <>
-                                    <Table striped bordered hover className="my-5">
+                                    <Table striped bordered hover className="my-5 text-center">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -42,16 +42,17 @@ const Home = () => {
                                         </thead>
                                         <tbody>
                                             {
-                                                users.users.map((user, index) => (
+                                                users.map((user, index) => (
                                                     <tr key={user.id}>
                                                         <td>{index + 1}</td>
                                                         <td>{user.name}</td>
                                                         <td>{user.username}</td>
                                                         <td>{user.email}</td>
                                                         <td>
-                                                            <Link className="btn btn-primary" to={`/user/${user.id}`}>View</Link>
-                                                            <Link className="btn btn-outline-primary">Edit</Link>
-                                                            <Link className="btn btn-danger">Delete</Link>
+                                                            {/* 👇️ link to dynamic path */}
+                                                            <Link className="btn btn-primary mx-3" to={`/view/${user.id}`}>View</Link>
+                                                            <Link className="btn btn-outline-primary mx-3">Edit</Link>
+                                                            <Link className="btn btn-danger mx-3">Delete</Link>
                                                         </td>
                                                     </tr>
                                                 ))

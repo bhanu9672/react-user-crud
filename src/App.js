@@ -6,8 +6,8 @@ import Contact from './Components/Pages/Contact';
 import NotFound from './Components/Pages/NotFound';
 import Header from "./Components/Layout/Header";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ViewUser from './Components/Pages/ViewUser';
+import { BrowserRouter, Routes, Route,useParams } from "react-router-dom";
+import View from './Components/Pages/View';
 
 function App() {
 	return (
@@ -16,10 +16,10 @@ function App() {
 			   <Header />
 				<Routes>
 					<Route path="/" element={ <Home /> } />
-					<Route path="/user:id" element={ <ViewUser /> } />
 					<Route path="/about" element={ <About /> } />
 					<Route path="/contact" element={<Contact />} />
-					<Route path="*" element={ <NotFound /> } />
+					<Route exact path="*" element={ <NotFound /> } />
+					<Route path='/view/:userId' element={ <View /> } />
 				</Routes>
 			</BrowserRouter>
 		</>
